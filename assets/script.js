@@ -16,4 +16,14 @@ generateBtn.addEventListener("click", writePassword);
 
 //Define length criteria
   var length = prompt ('Choose the length of your password.\nMust be at least 8 characters.\nMust not exceed 128 characters.');
-  
+
+//Check length criteria
+  var passwordInvalid = true;
+  while (passwordInvalid) {
+      if (length > 7 && length < 129){
+      {  passwordInvalid = false;} 
+      }else {
+        alert('Your input was invalid. Try again.');
+        length = prompt('Choose the length of your password.\nMust be at least 8 characters.\nMust not exceed 128 characters.');
+    } 
+}
